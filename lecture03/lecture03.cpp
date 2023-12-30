@@ -1,9 +1,18 @@
 #include <iostream>
 
+void pp(int& i)
+{
+    std::cout << &i << " " << i << " " << sizeof(i) << std::endl;
+}
+
 int main(int argc, char* argv[])
 {
 
-    std::cout << "Hello world" << std::endl;
+    int a = 10;
+    int b = 20;
+
+    pp(a);
+    pp(b);
 
     return 0;
 }

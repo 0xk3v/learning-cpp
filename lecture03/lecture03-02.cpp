@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <iostream>
 
 void pp(int& i)
@@ -40,6 +41,16 @@ public:
             std::cout << i << " " << m_arr[i] << std::endl;
         }
     }
+
+    const T& operator[](size_t index) const
+    {
+        return m_arr[index];
+    }
+
+    T& operator[](size_t index)
+    {
+        return m_arr[index];
+    }
 };
 
 int main(int argc, char* argv[])
@@ -47,8 +58,8 @@ int main(int argc, char* argv[])
 
     DynamicArr<int> myArr(10);
 
-    myArr.set(4, 30);
-    myArr.set(0, 90);
+    myArr[4] = 30;
+    myArr[0] = 10;
 
     myArr.print();
 

@@ -8,8 +8,12 @@ void pp(int& i)
 int main(int argc, char* argv[])
 {
 
-    int a = 10;
-    int b = 20;
+    int a = 14;
+    int b = 29;
+    int* pa = &a;
+    int* pb = &b;
+
+    *(pb + 1) = 170;
 
     pp(a);
     pp(b);
